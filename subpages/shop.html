@@ -26,10 +26,8 @@
 
 <body>
     <!-- navbar -->
-    <script src="${basePath}/navbar.js"></script>
     <div id="navbar" data-aos="fade-down"></div>
     <!-- login modal -->
-    <script src="${basePath}/account.js"></script>
     <div id="login-modal"></div>
     
     <!-- filter -->
@@ -255,9 +253,15 @@
         crossorigin="anonymous"></script>
     <!-- script -->
     <script>
-        const basePath = window.location.pathname.includes('it63test') 
-          ? '/it63test/assets/js/' 
+        const repoName = "it63test";
+        const basePath = window.location.pathname.includes(`/${repoName}/`) 
+          ? `/${repoName}/assets/js/` 
           : '/assets/js/';
+          
+        document.write(`
+          <script src="${basePath}navbar.js"><\/script>
+          <script src="${basePath}account.js"><\/script>
+        `);
       </script>
     <script src="${basePath}shop.js"></script>
     <script src="${basePath}home.js"></script>
