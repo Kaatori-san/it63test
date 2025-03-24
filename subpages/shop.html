@@ -26,10 +26,10 @@
 
 <body>
     <!-- navbar -->
-    <script src="../assets/js/navbar.js"></script>
+    <script src="${basePath}/navbar.js"></script>
     <div id="navbar" data-aos="fade-down"></div>
     <!-- login modal -->
-    <script src="../assets/js/account.js"></script>
+    <script src="${basePath}/account.js"></script>
     <div id="login-modal"></div>
     
     <!-- filter -->
@@ -254,8 +254,13 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <!-- script -->
-    <script src="../assets/js/shop.js"></script>
-    <script src="../assets/js/home.js"></script>
+    <script>
+        const basePath = window.location.pathname.includes('it63test') 
+          ? '/it63test/assets/js/' 
+          : '/assets/js/';
+      </script>
+    <script src="${basePath}shop.js"></script>
+    <script src="${basePath}home.js"></script>
     <script>AOS.init();</script>
 </body>
 
