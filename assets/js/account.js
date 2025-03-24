@@ -1,5 +1,5 @@
 $(function () {
-  $("#login-modal").load("assets/login.html");
+  $("#login-modal").load("./assets/login.html");
 });
 // show login
 function showLogin() {
