@@ -1,0 +1,89 @@
+#login {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff05;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10rem;
+}
+
+#login-modal {
+    border-radius: 5rem;
+}
+
+.card {
+    background-color: #1e1e2f;
+    color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.card-body {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.form-outline {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.7);
+}

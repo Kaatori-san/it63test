@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/img/hero 3.jpg');
+}
+
+/* Centering the checkout form */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left and Right Sections */
+.left-section {
+    width: 80%;
+    padding-right: 120px;
+}
+
+.right-section {
+    width: 35%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+/* Form Sections */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Radio buttons and checkboxes */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Complete Order Button */
+.complete-order {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.complete-order:hover {
+    background-color: #adb9c5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #af1515;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Style for radio buttons (Ship, Pickup in store, Payment, Billing) */
+input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #af1515;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    vertical-align: -2px;
+}
+
+input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #af1515;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style for checkboxes (News and offers, Save info) */
+input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #af1515;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    vertical-align: -5px;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\2713"; /* Unicode checkmark */
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]:checked {
+    background-color: #af1515;
+    border-color: #af1515;
+}
+
+/* Style the container of radio inputs */
+.payment label, .delivery label, .billing-address label {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style when the radio button is selected */
+.payment input[type="radio"]:checked + label,
+.delivery input[type="radio"]:checked + label,
+.billing-address input[type="radio"]:checked + label {
+    border-color: #af1515;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Order Summary */
+.order-summary {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary p {
+    margin: 5px 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 990px) {
+    .toggle-summary {
+        display: none; /* Hide the button when screen width is greater than 1000px */
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    main {
+        flex-direction: column-reverse; /* Move right section (Order Summary) to the top */
+        align-items: center;
+    }
+
+    .right-section {
+        width: 100%; /* Full width for mobile */
+        padding: 10px;
+        display: block; /* Ensure it's visible */
+    }
+
+    .left-section {
+        width: 100%; /* Full width for mobile */
+        padding-right: 0;
+    }
+    
+    .order-summary {
+        display: none; /* Hide order summary by default */
+    }
+
+    .toggle-summary {
+        width: 100%;
+        background-color: #af1515;
+        color: white;
+        padding: 10px;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .toggle-summary:after {
+        content: "\25BC"; /* Downward arrow */
+        float: right;
+    }
+
+    .order-summary.active {
+        display: block; /* Show when active */
+    }
+}
